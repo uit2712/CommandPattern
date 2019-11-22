@@ -1,8 +1,8 @@
 ﻿namespace SimpleDrawingApp.Commands
 {
-    interface IDraw
+    abstract class IDraw
     {
-        void Execute();
-        void Unexecute();
+        public abstract void Execute();
+        public abstract void Unexecute();
     }
 }

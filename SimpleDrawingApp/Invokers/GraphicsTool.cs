@@ -22,13 +22,13 @@ namespace SimpleDrawingApp.Invokers
                 _commands.Add(command);
         }
 
-        public void Execute()
+        public override void Execute()
         {
             IDraw command = GetLastCommand();
             command?.Execute();
         }
 
-        public void Unexecute()
+        public override void Unexecute()
         {
             UnexecuteLastCommand();
             RedoAllCommands();

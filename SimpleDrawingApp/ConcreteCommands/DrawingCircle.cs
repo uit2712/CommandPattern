@@ -22,12 +22,12 @@ namespace SimpleDrawingApp.ConcreteCommands
             _radius = radius;
         }
 
-        public void Execute()
+        public override void Execute()
         {
             _drawing?.DrawCircle(_graphics, _color, _position, _radius);
         }
 
-        public void Unexecute()
+        public override void Unexecute()
         {
             _drawing?.DrawCircle(_graphics, _transparentColor, _position, _radius);
         }

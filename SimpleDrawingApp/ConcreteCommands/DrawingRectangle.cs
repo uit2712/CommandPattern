@@ -20,12 +20,12 @@ namespace SimpleDrawingApp.ConcreteCommands
             _rectangle = rectangle;
         }
 
-        public void Execute()
+        public override void Execute()
         {
             _drawing?.DrawRectangle(_graphics, _color, _rectangle);
         }
 
-        public void Unexecute()
+        public override void Unexecute()
         {
             _drawing?.DrawRectangle(_graphics, _transparentColor, _rectangle);
         }
